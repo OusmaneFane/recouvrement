@@ -25,7 +25,7 @@ Route::get('/login', [LoginController::class, 'login']);
 
 Route::get('/prospect', [ProspectController::class, 'page'])->name('prospect');
 Route::post('/prospect/data', [ProspectController::class, 'data'])->name('prospect');
-Route::get('/prospect/data', [ProspectController::class, 'data2'])->name('prospect');
+Route::get('/add_prospect', [ProspectController::class, 'data2'])->name('prospect');
 Route::post('/data_prospect', [ProspectController::class, 'send_data']);
 Route::get('/edit', [ProspectController::class, 'edit']);
 Route::get('/prospect/{data}/edit', [ProspectController::class, 'data_edit'])->name('edit');

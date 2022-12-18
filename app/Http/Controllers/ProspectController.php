@@ -22,10 +22,10 @@ class ProspectController extends Controller
 
 
     }
-    public function data2(){
+    public function data2(Data_Prospect $data){
         $prospects = Propect::all();
 
-        return view('/prospect.data', ['prospects' => $prospects]);
+        return view('/prospect.create', ['prospects' => $prospects, 'data'=>$data]);
     }
     public function send_data(){
         $prospects = Propect::all();
