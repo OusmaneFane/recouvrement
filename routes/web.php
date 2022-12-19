@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RemiseController;
 use App\Http\Controllers\ProspectController;
 
 /*
@@ -32,6 +33,8 @@ Route::get('/prospect/{data}/edit', [ProspectController::class, 'data_edit'])->n
 Route::put('/prospect/{data}', [ProspectController::class, 'update'])->name('update');
 Route::delete('/prospect/{data}', [ProspectController::class, 'destroy'])->name('destroy');
 
+Route::get('/add_remise', [RemiseController::class, 'create']);
+Route::get('/edit_remise', [RemiseController::class, 'create']);
 
 Auth::routes();
 

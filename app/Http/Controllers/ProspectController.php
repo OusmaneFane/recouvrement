@@ -78,14 +78,14 @@ class ProspectController extends Controller
 
         ]);
         if($data){
-            return view('/prospect.data', ['prospects'=>$prospects])->with('sucess', 'Opération réussi avec succès');
+            return redirect('/edit')->with('sucess', 'Opération réussi avec succès');
         }
 
     }
-    public function edit(){
+    public function edit(Data_Prospect $data){
         $prospects = Propect::all();
         $data_prospects = Data_Prospect::all();
-        return view('/prospect.edit', ['prospects' => $prospects, 'data_prospects' => $data_prospects]);
+        return view('/prospect.edit', ['data'=>$data, 'prospects' => $prospects, 'data_prospects' => $data_prospects]);
 
     }
     public function data_edit(Data_Prospect $data){
