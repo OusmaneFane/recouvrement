@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RemiseController;
+use App\Http\Controllers\CreanceControlleur;
 use App\Http\Controllers\ProspectController;
 
 /*
@@ -34,7 +35,15 @@ Route::put('/prospect/{data}', [ProspectController::class, 'update'])->name('upd
 Route::delete('/prospect/{data}', [ProspectController::class, 'destroy'])->name('destroy');
 
 Route::get('/add_remise', [RemiseController::class, 'create']);
-Route::get('/edit_remise', [RemiseController::class, 'create']);
+Route::get('/edit_remise', [RemiseController::class, 'edit']);
+Route::post('/add_remise', [RemiseController::class, 'add_remise']);
+Route::get('/remise/{data}/edit', [RemiseController::class, 'data_edit'])->name('edit');
+Route::put('/remise/{data}', [RemiseController::class, 'update'])->name('update');
+Route::delete('/remise/{data}', [RemiseController::class, 'destroy'])->name('destroy');
+
+Route::get('/add_debiteur', [CreanceControlleur::class, 'add']);
+Route::post('/data_debiteur', [CreanceControlleur::class, 'send_data']);
+
 
 Auth::routes();
 
