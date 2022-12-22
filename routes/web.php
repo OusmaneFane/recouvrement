@@ -44,6 +44,8 @@ Route::delete('/remise/{data}', [RemiseController::class, 'destroy'])->name('des
 Route::get('/add_debiteur', [CreanceControlleur::class, 'add']);
 Route::post('/data_debiteur', [CreanceControlleur::class, 'send_data']);
 
+Route::get('/add_creance', [CreanceControlleur::class, 'add_creance']);
+
 
 Auth::routes();
 

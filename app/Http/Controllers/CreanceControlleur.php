@@ -50,4 +50,20 @@ class CreanceControlleur extends Controller
             return redirect()->back()->with('success', 'Opération d\'ajout effectuée avec succès');
         }
     }
+    public function add_creance(Request $request){
+
+        $type = $request->input('personne');
+        $code_debiteur = $request->input('code');
+
+        $results = Debiteur::where(function($query) use ($type, $code_debiteur) {
+            if ($type) {
+                $query->where('type', $type);
+            }
+            if ($code_debiteur) {
+                $query->where('code_debiteur', $code_debiteur);
+            }
+        })->get();
+
+        return view('/debiteur.add_creance', ['results'=>$results, 'request'=>$request]);
+    }
 }
