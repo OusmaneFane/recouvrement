@@ -45,7 +45,10 @@ Route::get('/add_debiteur', [CreanceControlleur::class, 'add']);
 Route::post('/data_debiteur', [CreanceControlleur::class, 'send_data']);
 
 Route::get('/add_creance', [CreanceControlleur::class, 'add_creance']);
+Route::get('/creance/{data}/edit', [CreanceControlleur::class, 'data_edit'])->name('edit');
 
+Route::get('/import_creance', [CreanceControlleur::class, 'view_import']);
+Route::post('/add_creance', [CreanceControlleur::class, 'send_creance']);
 
 Auth::routes();
 

@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Creance;
 use App\Models\Debiteur;
+use App\Models\Add_creance;
 use Illuminate\Http\Request;
 
 class CreanceControlleur extends Controller
 {
-    public function add(){
-        return view('/debiteur.create');
+    public function add(Debiteur $data){
+
+        return view('/debiteur.create', ['data'=>$data]);
     }
     public function send_data(){
         request()->validate([
@@ -50,20 +53,72 @@ class CreanceControlleur extends Controller
             return redirect()->back()->with('success', 'Opération d\'ajout effectuée avec succès');
         }
     }
-    public function add_creance(Request $request){
+    public function add_creance(Request $request, Debiteur $data){
 
-        $type = $request->input('personne');
-        $code_debiteur = $request->input('code');
 
-        $results = Debiteur::where(function($query) use ($type, $code_debiteur) {
-            if ($type) {
-                $query->where('type', $type);
-            }
-            if ($code_debiteur) {
-                $query->where('code_debiteur', $code_debiteur);
-            }
-        })->get();
 
-        return view('/debiteur.add_creance', ['results'=>$results, 'request'=>$request]);
+        // $type = $request->input('personne');
+        // $code_debiteur = $request->input('code');
+
+        // $results = Debiteur::where(function($query) use ($type, $code_debiteur) {
+        //     if ($type) {
+        //         $query->where('type', $type);
+        //     }
+        //     if ($code_debiteur) {
+        //         $query->where('code_debiteur', $code_debiteur);
+        //     }
+        // })->get();
+        $data_debit = Debiteur::all();
+
+        return view('/debiteur.add_creance', ['data_debit'=>$data_debit, 'request'=>$request, 'data'=>$data]);
     }
+    public function data_edit(Debiteur $data){
+        $data_debit = Debiteur::all();
+        return view('/debiteur.data_creance', ['data'=>$data, 'data_debit'=>$data_debit]);
+    }
+    public function send_creance(){
+        request()->validate([
+        'code_creance' => 'required',
+        'nature_creance' => 'required', 
+        'ecr'=> 'required', 
+        'mp'=> 'required', 
+        'remise'=> 'required', 
+        'decote'=> 'required', 
+        'statut'=> 'required', 
+        'action'=> 'required', 
+        'date_recep'=> 'required', 
+        'total'=> 'required', 
+        'mci'=> 'required', 
+        'abandon'=> 'required', 
+        'code_client'=> 'required', 
+        'objet'=> 'required', 
+        'int_recep'=> 'required', 
+        'nbre_dossier' => 'required'
+        ]);
+        $data = Creance::create([
+            'code_creance' => request('code_creance'),
+            'nature_creance' => request('nature_creance'),
+            'ecr' => request('ecr'),
+            'mp' => request('mp'),
+            'remise' => request('remise'),
+            'decote' => request('decote'),
+            'statut' => request('statut'),
+            'action' => request('action'),
+            'date_recep'=> request('date_recep'),
+            'total' => request('total'),
+            'mci' => request('mci'),
+            'abandon' => request('abandon'),
+            'code_client' => request('code_client'),
+            'objet' => request('objet'),
+            'int_recep' => request('int_recep'),
+            'nbre_dossier' => request('nbre_dossier')
+        ]);
+        if($data){
+            return redirect()->back()->with('success', 'Opération effectuée avec succès');
+        }
+    }
+    public function view_import(){
+        return view('/debiteur.import');
+    }
+    
 }

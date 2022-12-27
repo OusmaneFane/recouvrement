@@ -1,36 +1,22 @@
 @extends('templates.home')
+@section('navbar')
+@endsection
 @section('content')
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+<section class="content">
 <div class="container">
-    {{-- <div class="row">
-      <div class="col-sm">
-        <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-3 col-form-label">Type personne</label>
-            <div class="col-sm-7">
-              <input type="text" class="form-control" name="contrat" placeholder="Password">
-            </div>
-          </div>
-      </div>
-      <div class="col-sm">
-        <div class="form-group row">
-                  <label for="inputPassword3" class="col-sm-3 col-form-label">Code Débiteur</label>
-                  <div class="col-sm-7">
-                    <input type="text" class="form-control" name="contrat" placeholder="Password">
-                  </div>
-                </div>
-      </div>
-      <div class="col-sm">
-        <div class="form-group row">
-                  <label for="inputPassword3" class="col-sm-3 col-form-label">Nom/Pre Débiteur</label>
-                  <div class="col-sm-7">
-                    <input type="text" class="form-control" name="contrat" placeholder="Password">
-                  </div>
-                </div>
-      </div>
-    </div> --}}
-  </div>
-  <form action="#" method="get">
-    @csrf
+    <div class="container-fluid">
         <div class="row">
+            <div class="col-12">
+                <div class="card mt-2">
+                    <div class="card-header">
+                      <h3 class="card-title">Liste des Prospects</h3>
+                    </div>
+  
+  {{-- <form action="#" method="get">
+    @csrf
+        <div class="row mt-3">
           <div class="col"><div class="form-group row">
               <label for="inputPassword3" class="col-sm-3 col-form-label">Type personne</label>
               <div class="col-sm-7">
@@ -67,72 +53,44 @@
           </div>
         </div>
         <button type="submit" class="btn btn-primary">Search</button>
-  </form>
-  <table id="example1" class="table table-bordered table-striped">
-    <thead>
-    <tr>
-      <th>Code Creancier</th>
-      <th>Débiteur Nom Prenom RS</th>
-      <th>N° CIN</th>
-      <th>Matricule fiscale</th>
-    </tr>
-    </thead>
-    <tbody>
-        @if ($request->has('personne') || $request->has('code'))
-        @foreach($results as $result)
-        <tr>
-            <td>{{$result->type}}</td>
-            <td>{{$result->pays}}</td>
-            <td>{{$result->nom_resp}}</td>
-            <td>{{$result->abrev}}</td>
-        </tr>
-        @endforeach
-        @else
-          <tr>
-             <td colspan="3">Veillez filter !!!</td>
+  </form> --}}
+                    <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                <th>Code Creancier</th>
+                                <th>Débiteur Nom Prenom RS</th>
+                                <th>N° CIN</th>
+                                <th>Matricule fiscale</th>
+                                <th>Edit</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {{-- @if ($request->has('personne') || $request->has('code')) --}}
+                                    @foreach($data_debit as $data)
+                                    <tr>
+                                        <td>{{$data->type}}</td>
+                                        <td>{{$data->pays}}</td>
+                                        <td>{{$data->nom_resp}}</td>
+                                        <td>{{$data->abrev}}</td>
+                                        <td><a href="/creance/{{ $data->id }}/edit"><i class="bi bi-pencil-square"></i></a></td>
+                                    </tr>
+                                    @endforeach
+                                    {{-- @else
+                                    <tr>
+                                        <td colspan="3">Veillez filter !!!</td>
 
-          </tr>
-        @endif
-    </tbody>
-  </table>
+                                    </tr>
+                                    @endif --}}
+                                </tbody>
+                            </table>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 
-    <script src="/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- DataTables  & Plugins -->
-    <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="/plugins/jszip/jszip.min.js"></script>
-    <script src="/plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="/plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="/dist/js/adminlte.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="/dist/js/demo.js"></script>
-    <!-- Page specific script -->
-    <script>
-      $(function () {
-        $("#example1").DataTable({
-          "responsive": true, "lengthChange": false, "autoWidth": false,
-          "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-          "paging": true,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": true,
-          "autoWidth": false,
-          "responsive": true,
-        });
-      });
-    </script>
+
 
 @endsection
