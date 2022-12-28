@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Import;
 use App\Models\Creance;
 use App\Models\Debiteur;
 use App\Models\Add_creance;
 use Illuminate\Http\Request;
+use App\Models\Import_creance;
+use Illuminate\Support\Facades\DB;
 
 class CreanceControlleur extends Controller
 {
@@ -79,20 +82,20 @@ class CreanceControlleur extends Controller
     public function send_creance(){
         request()->validate([
         'code_creance' => 'required',
-        'nature_creance' => 'required', 
-        'ecr'=> 'required', 
-        'mp'=> 'required', 
-        'remise'=> 'required', 
-        'decote'=> 'required', 
-        'statut'=> 'required', 
-        'action'=> 'required', 
-        'date_recep'=> 'required', 
-        'total'=> 'required', 
-        'mci'=> 'required', 
-        'abandon'=> 'required', 
-        'code_client'=> 'required', 
-        'objet'=> 'required', 
-        'int_recep'=> 'required', 
+        'nature_creance' => 'required',
+        'ecr'=> 'required',
+        'mp'=> 'required',
+        'remise'=> 'required',
+        'decote'=> 'required',
+        'statut'=> 'required',
+        'action'=> 'required',
+        'date_recep'=> 'required',
+        'total'=> 'required',
+        'mci'=> 'required',
+        'abandon'=> 'required',
+        'code_client'=> 'required',
+        'objet'=> 'required',
+        'int_recep'=> 'required',
         'nbre_dossier' => 'required'
         ]);
         $data = Creance::create([
@@ -120,5 +123,40 @@ class CreanceControlleur extends Controller
     public function view_import(){
         return view('/debiteur.import');
     }
+    public function import_creance(Request $request){
     
+                // Valider les données du formulaire
+                request()->validate([
+                    'file' => 'required|file|max:1024', // Taille maximale du fichier : 1 Mo
+                    'code_creancier' => 'required',
+                    'nom_remise'=> 'required',
+                    'type_deb'=> 'required',
+                    'rs'=> 'required',
+                ]);
+
+                // Récupérer le fichier téléchargé
+                $file = $request->file('file');
+        
+
+                // Déplacer le fichier dans le répertoire de stockage
+                $path = $file->store('uploads');
+                
+                // Enregistrer les informations du fichier dans la base de données
+             $data = Import::create([
+                    'code_creancier' => request('code_creancier'),
+                    'nom_remise' => request('nom_remise'),
+                    'type_deb' => request('type_deb'),
+                    'rs' => request('rs'),
+                    'name' => $file->getClientOriginalName(),
+                    'size' => $file->getSize(),
+                    'type' => $file->getMimeType(),
+                    'path' => $path,
+                ]);
+
+
+                // Rediriger l'utilisateur vers la page de destination
+                return redirect()->back()->with('success', 'File uploaded successfully');
+
+    }
+
 }

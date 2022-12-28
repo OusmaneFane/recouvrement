@@ -50,6 +50,8 @@ Route::get('/creance/{data}/edit', [CreanceControlleur::class, 'data_edit'])->na
 Route::get('/import_creance', [CreanceControlleur::class, 'view_import']);
 Route::post('/add_creance', [CreanceControlleur::class, 'send_creance']);
 
+Route::post('/import_creance', [CreanceControlleur::class, 'import_creance']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

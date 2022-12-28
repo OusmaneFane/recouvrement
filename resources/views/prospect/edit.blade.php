@@ -55,9 +55,8 @@
                     <th>Nature</th>
                     <th>Nom/Prenom/RS</th>
                     <th>Agence</th>
-                    <th>Agence</th>
-                    <th>Agence</th>
-                    <th>Agence</th>
+                    <th></th>
+
 
                   </tr>
                   </thead>
@@ -69,13 +68,20 @@
                     <td>{{$data->nom_resp}}</td>
                     <td> {{$data->apporteur}}</td>
                     <td>X</td>
-                    <td><a href="/prospect/{{ $data->id }}/edit" ><i class="bi bi-pencil-square"></i></a></td>
-                    <td><i class="bi bi-info-circle"></i></td>
-                    <form method="POST" action="/prospect/{{ $data->id }}">
-                        @method('DELETE')
-                        @csrf
-                        <td><button class="btn btn-danger"><i class="bi bi-x-circle-fill"></i></button></td>
-                    </form>
+                    <td class="text-right py-0 align-middle">
+                        <div class="btn-group btn-group-sm">
+                            <a href="/prospect/{{ $data->id }}/edit" ><i class="fas fa-eye"></i></a>
+                            
+                            <form method="POST" action="/prospect/{{ $data->id }}">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-danger"><i class="bi bi-x-circle-fill"></i></button></td>
+                            </form>                            
+                          </div>
+                    
+                    
+                  
+                      
                   </tr>
                     @endforeach
                   </tfoot>
