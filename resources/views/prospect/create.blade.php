@@ -1,7 +1,14 @@
 @extends('templates.home')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
+@section('navbar')
+<li class="nav-item d-none d-sm-inline-block">
+    <a href="index3.html" class="nav-link">Creance >></a>
+  </li>
+  <li class="nav-item d-none d-sm-inline-block">
+    <a href="#" class="nav-link">Ajout Propect</a>
+  </li>
+@endsection
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
@@ -37,26 +44,26 @@
                     <form class="form-horizontal">
                     <div class="card-body">
                         <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">Type</label>
-                        <div class="col-sm-10">
+                        <label for="inputEmail3" class="col-sm-4 col-form-label">Type</label>
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" name="prospect_type" id="inputEmail3" placeholder="Type">
                         </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Nature</label>
-                            <div class="col-sm-10">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Nature</label>
+                            <div class="col-sm-8">
                             <input type="text" class="form-control" name="nature" id="inputEmail3" placeholder="Nature">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Apporteur</label>
-                            <div class="col-sm-10">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Apporteur</label>
+                            <div class="col-sm-8">
                             <input type="text" class="form-control" name="apporteur" id="inputEmail3" placeholder="Apporteur">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Statut</label>
-                            <div class="col-sm-10">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Statut</label>
+                            <div class="col-sm-8">
                             <input type="text" class="form-control" name="statut" id="inputEmail3" placeholder="Statut">
                             </div>
                         </div>
@@ -84,27 +91,27 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Pays</label>
-                            <div class="col-sm-10">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Pays</label>
+                            <div class="col-sm-8">
                             <input type="text" class="form-control" name="pays" id="inputEmail3" placeholder="Pays">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Type Apporteur</label>
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Type Apporteur</label>
 
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                             <input type="text" class="form-control" name="type_apporteur" id="inputEmail3" placeholder="Type apporteur">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Chargé client</label>
-                            <div class="col-sm-10">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Chargé client</label>
+                            <div class="col-sm-8">
                             <input type="text" class="form-control" name="charge_client" id="inputEmail3" placeholder="Chargé client">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Capital</label>
-                            <div class="col-sm-10">
+                            <label for="inputEmail3" class="col-sm-4 col-form-label">Capital</label>
+                            <div class="col-sm-8">
                             <input type="text" class="form-control" name="capital" id="inputEmail3" placeholder="Capital">
                             </div>
                         </div>
