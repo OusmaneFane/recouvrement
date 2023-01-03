@@ -1,748 +1,956 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/default/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/default/assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Material Dashboard PRO by Creative Tim
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- Extra details for Live View on GitHub Pages -->
+  <!-- Canonical SEO -->
+  <link rel="canonical" href="https://www.creative-tim.com/product/material-dashboard-pro" />
+  <!--  Social tags      -->
+  <meta name="keywords" content="creative tim, html dashboard, html css dashboard, web dashboard, bootstrap 4 dashboard, bootstrap 4, css3 dashboard, bootstrap 4 admin, material dashboard bootstrap 4 dashboard, frontend, responsive bootstrap 4 dashboard, material design, material dashboard bootstrap 4 dashboard">
+  <meta name="description" content="Material Dashboard PRO is a Premium Material Bootstrap 4 Admin with a fresh, new design inspired by Google's Material Design.">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="Material Dashboard PRO by Creative Tim">
+  <meta itemprop="description" content="Material Dashboard PRO is a Premium Material Bootstrap 4 Admin with a fresh, new design inspired by Google's Material Design.">
+  <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/51/original/opt_mdp_thumbnail.jpg">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="product">
+  <meta name="twitter:site" content="@creativetim">
+  <meta name="twitter:title" content="Material Dashboard PRO by Creative Tim">
+  <meta name="twitter:description" content="Material Dashboard PRO is a Premium Material Bootstrap 4 Admin with a fresh, new design inspired by Google's Material Design.">
+  <meta name="twitter:creator" content="@creativetim">
+  <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/51/original/opt_mdp_thumbnail.jpg">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="655968634437471">
+  <meta property="og:title" content="Material Dashboard PRO by Creative Tim" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html" />
+  <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/51/original/opt_mdp_thumbnail.jpg" />
+  <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap 4 Admin with a fresh, new design inspired by Google's Material Design." />
+  <meta property="og:site_name" content="Creative Tim" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="/default/assets/css/material-dashboard.min.css?v=2.1.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="/default/assets/demo/demo.css" rel="stylesheet" />
+  <!-- Google Tag Manager -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ url('plugins/fontawesome-free/css/all.min.css') }}">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="{{ url('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="{{ url('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="{{ url('plugins/jqvmap/jqvmap.min.css') }}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ url('dist/css/adminlte.min.css') }}">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{{ url('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="{{ url('plugins/daterangepicker/daterangepicker.css') }}">
-  <!-- summernote -->
-  <link rel="stylesheet" href="{{ url('plugins/summernote/summernote-bs4.min.css') }}">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
- <!-- DataTables -->
- <link rel="stylesheet" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
- <link rel="stylesheet" href="/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
- <link rel="stylesheet" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
-  <!-- daterange picker -->
-  <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker.css">
-  <!-- iCheck for checkboxes and radio inputs -->
-  <link rel="stylesheet" href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Bootstrap Color Picker -->
-  <link rel="stylesheet" href="/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="/plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-  <!-- Bootstrap4 Duallistbox -->
-  <link rel="stylesheet" href="/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
-  <!-- BS Stepper -->
-  <link rel="stylesheet" href="/plugins/bs-stepper/css/bs-stepper.min.css">
-  <!-- dropzonejs -->
-  <link rel="stylesheet" href="/plugins/dropzone/min/dropzone.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="/dist/css/adminlte.min.css">
-
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
-  <!-- Preloader -->
-  {{-- <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div> --}}
+<body class="">
+  <!-- Extra details for Live View on GitHub Pages -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="wrapper ">
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/default/assets/img/sidebar-1.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      {{-- <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li> --}}
-      @yield('navbar')
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          CT
         </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+          Recouvrement
         </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="/images/logo1.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">MaliCreances-sa</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
-        </div>
       </div>
-
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="photo">
+            <img src="/default/assets/img/faces/avatar.jpg" />
+          </div>
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+               {{Auth::user()->name}}
+                <b class="caret"></b>
+              </span>
+            </a>
+            <div class="collapse" id="collapseExample">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="sidebar-mini"> MP </span>
+                    <span class="sidebar-normal"> My Profile </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="sidebar-mini"> EP </span>
+                    <span class="sidebar-normal"> Edit Profile </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="sidebar-mini"> S </span>
+                    <span class="sidebar-normal"> Settings </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+        <ul class="nav">
+          <li class="nav-item active ">
+            <a class="nav-link" href="/default/examples/dashboard.html">
+              <i class="material-icons">dashboard</i>
+              <p> Dashboard </p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+              <i class="material-icons">image</i>
+              <p> Prospects
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="pagesExamples">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/add_prospect">
+                    <span class="sidebar-mini"> P </span>
+                    <span class="sidebar-normal"> Ajout Prospect </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/edit">
+                    <span class="sidebar-mini"> RS </span>
+                    <span class="sidebar-normal"> Modification Prospect </span>
+                  </a>
+                </li>
+                {{-- <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/pages/timeline.html">
+                    <span class="sidebar-mini"> T </span>
+                    <span class="sidebar-normal"> Timeline </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/pages/login.html">
+                    <span class="sidebar-mini"> LP </span>
+                    <span class="sidebar-normal"> Login Page </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/pages/register.html">
+                    <span class="sidebar-mini"> RP </span>
+                    <span class="sidebar-normal"> Register Page </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/pages/lock.html">
+                    <span class="sidebar-mini"> LSP </span>
+                    <span class="sidebar-normal"> Lock Screen Page </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/pages/user.html">
+                    <span class="sidebar-mini"> UP </span>
+                    <span class="sidebar-normal"> User Profile </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/pages/error.html">
+                    <span class="sidebar-mini"> E </span>
+                    <span class="sidebar-normal"> Error Page </span>
+                  </a>
+                </li> --}}
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
+              <i class="material-icons">apps</i>
+              <p> Contrat                               
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="componentsExamples">
+              <ul class="nav">
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Prospect
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/add_prospect" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajout Prospect</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/edit" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Modification Prospect</p>
-                </a>
-              </li>
-            </ul>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/components/buttons.html">
+                    <span class="sidebar-mini"> B </span>
+                    <span class="sidebar-normal"> Buttons </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/components/grid.html">
+                    <span class="sidebar-mini"> GS </span>
+                    <span class="sidebar-normal"> Grid System </span>
+                  </a>
+                </li>
+                {{-- <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/components/panels.html">
+                    <span class="sidebar-mini"> P </span>
+                    <span class="sidebar-normal"> Panels </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/components/sweet-alert.html">
+                    <span class="sidebar-mini"> SA </span>
+                    <span class="sidebar-normal"> Sweet Alert </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/components/notifications.html">
+                    <span class="sidebar-mini"> N </span>
+                    <span class="sidebar-normal"> Notifications </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/components/icons.html">
+                    <span class="sidebar-mini"> I </span>
+                    <span class="sidebar-normal"> Icons </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/components/typography.html">
+                    <span class="sidebar-mini"> T </span>
+                    <span class="sidebar-normal"> Typography </span>
+                  </a>
+                </li> --}}
+              </ul>
+            </div>
           </li>
-          {{-- <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
+          <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#formsExamples">
+              <i class="material-icons">content_paste</i>
+              <p> Créancier
+                <b class="caret"></b>
               </p>
             </a>
-          </li> --}}
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Contrat
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p></p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p></p>
-                </a>
-              </li>
-              
-            </ul>
+            <div class="collapse" id="formsExamples">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/forms/regular.html">
+                    <span class="sidebar-mini"> RF </span>
+                    <span class="sidebar-normal"> Regular Forms </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/forms/extended.html">
+                    <span class="sidebar-mini"> EF </span>
+                    <span class="sidebar-normal"> Extended Forms </span>
+                  </a>
+                </li>
+                {{-- <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/forms/validation.html">
+                    <span class="sidebar-mini"> VF </span>
+                    <span class="sidebar-normal"> Validation Forms </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/forms/wizard.html">
+                    <span class="sidebar-mini"> W </span>
+                    <span class="sidebar-normal"> Wizard </span>
+                  </a>
+                </li> --}}
+              </ul>
+            </div>
           </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
-              <p>
-                Créancier
-                <i class="fas fa-angle-left right"></i>
+          <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
+              <i class="material-icons">grid_on</i>
+              <p> Remise
+                <b class="caret"></b>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p></p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p></p>
-                </a>
-              </li>
-              
-            </ul>
+            <div class="collapse" id="tablesExamples">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/add_remise">
+                    <span class="sidebar-mini"> RT </span>
+                    <span class="sidebar-normal"> Ajout Remise </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/edit_remise">
+                    <span class="sidebar-mini"> ET </span>
+                    <span class="sidebar-normal"> Modification Remise </span>
+                  </a>
+                </li>
+                {{-- <li class="nav-item ">
+                  <a class="nav-link" href="/default/examples/tables/datatables.net.html">
+                    <span class="sidebar-mini"> DT </span>
+                    <span class="sidebar-normal"> DataTables.net </span>
+                  </a>
+                </li> --}}
+              </ul>
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Remise
-                <i class="fas fa-angle-left right"></i>
+          <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#mapsExamples">
+              <i class="material-icons">place</i>
+              <p> Créance
+                <b class="caret"></b>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/add_remise" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajout Rémise</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/edit_remise" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Modification Rémise</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          {{-- <li class="nav-header">EXAMPLES</li>
-          <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Calendar
-                <span class="badge badge-info right">2</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Gallery
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/kanban.html" class="nav-link">
-              <i class="nav-icon fas fa-columns"></i>
-              <p>
-                Kanban Board
-              </p>
-            </a>
-          </li> --}}
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
-                Créance
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/add_debiteur" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajout Débiteur</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/import_creance" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Import Créance</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Historique Créance</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Modification Créance</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/add_creance" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajout Créance</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Finance
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/examples/invoice.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p></p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/profile.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p></p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-plus-square"></i>
-              <p>
-                Facturation
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>
-                    
-                    <i class="fas fa-angle-left right"></i>
-                  </p>
-                </a>
-                {{-- <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="pages/examples/login.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Login v1</p>
+            <div class="collapse" id="mapsExamples">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/add_debiteur">
+                    <span class="sidebar-mini"> GM </span>
+                    <span class="sidebar-normal"> Ajout Débiteur </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/import_creance">
+                    <span class="sidebar-mini"> FSM </span>
+                    <span class="sidebar-normal"> Import Créance </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">
+                    <span class="sidebar-mini"> VM </span>
+                    <span class="sidebar-normal"> Historique Créance </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">
+                      <i class="material-icons">widgets</i>
+                      <p> Modification Créance </p>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/register.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Register v1</p>
+                <li class="nav-item ">
+                    <a class="nav-link" href="/add_creance">
+                      <i class="material-icons">timeline</i>
+                      <p> Ajout Créance </p>
                     </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/forgot-password.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Forgot Password v1</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/recover-password.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Recover Password v1</p>
-                    </a>
-                  </li>
-                </ul> --}}
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>
-                   
-                    <i class="fas fa-angle-left right"></i>
-                  </p>
-                </a>
-                {{-- <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="pages/examples/login-v2.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Login v2</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/register-v2.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Register v2</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/forgot-password-v2.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Forgot Password v2</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/examples/recover-password-v2.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Recover Password v2</p>
-                    </a>
-                  </li>
-                </ul> --}}
-              </li>
-              
-            </ul>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-search"></i>
-              <p>
-                Traitement
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/search/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p></p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/search/enhanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p></p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          {{-- <li class="nav-header">MISCELLANEOUS</li>
-          <li class="nav-item">
-            <a href="iframe.html" class="nav-link">
-              <i class="nav-icon fas fa-ellipsis-h"></i>
-              <p>Tabbed IFrame Plugin</p>
+         
+         
+          <li class="nav-item ">
+            <a class="nav-link" href="/default/examples/calendar.html">
+              <i class="material-icons">date_range</i>
+              <p> Calendar </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Documentation</p>
-            </a>
-          </li>
-          <li class="nav-header">MULTI LEVEL EXAMPLE</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-circle"></i>
-              <p>
-                Level 1
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>
-                    Level 2
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
-            </a>
-          </li>
-          <li class="nav-header">LABELS</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Important</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Warning</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
-              <p>Informational</p>
-            </a>
-          </li> --}}
         </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-minimize">
+              <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
+                <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+                <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
+              </button>
+            </div>
+            <a class="navbar-brand" href="#pablo">Dashboard</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <form class="navbar-form">
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                  <i class="material-icons">search</i>
+                  <div class="ripple-container"></div>
+                </button>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                  <i class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">notifications</i>
+                  <span class="notification">5</span>
+                  <p class="d-lg-none d-md-block">
+                    Some Actions
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                  <a class="dropdown-item" href="#">Another Notification</a>
+                  <a class="dropdown-item" href="#">Another One</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="content">
+          <div class="container-fluid">
+           
+                @yield("content")
+            
+                      </div>
+                    </div>
+                  </div>
+                  <footer class="footer">
+                    <div class="container-fluid">
+                      <nav class="float-left">
+                        <ul>
+                          <li>
+                            <a href="https://www.creative-tim.com">
+                              Creative Tim
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://creative-tim.com/presentation">
+                              About Us
+                            </a>
+                          </li>
+                          <li>
+                            <a href="http://blog.creative-tim.com">
+                              Blog
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://www.creative-tim.com/license">
+                              Licenses
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <div class="copyright float-right">
+                        &copy;
+                        <script>
+                          document.write(new Date().getFullYear())
+                        </script>, made with <i class="material-icons">favorite</i> by
+                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+                      </div>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+              <div class="fixed-plugin">
+                <div class="dropdown show-dropdown">
+                  <a href="#" data-toggle="dropdown">
+                    <i class="fa fa-cog fa-2x"> </i>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="header-title"> Sidebar Filters</li>
+                    <li class="adjustments-line">
+                      <a href="javascript:void(0)" class="switch-trigger active-color">
+                        <div class="badge-colors ml-auto mr-auto">
+                          <span class="badge filter badge-purple" data-color="purple"></span>
+                          <span class="badge filter badge-azure" data-color="azure"></span>
+                          <span class="badge filter badge-green" data-color="green"></span>
+                          <span class="badge filter badge-warning" data-color="orange"></span>
+                          <span class="badge filter badge-danger" data-color="danger"></span>
+                          <span class="badge filter badge-rose active" data-color="rose"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                      </a>
+                    </li>
+                    <li class="header-title">Sidebar Background</li>
+                    <li class="adjustments-line">
+                      <a href="javascript:void(0)" class="switch-trigger background-color">
+                        <div class="ml-auto mr-auto">
+                          <span class="badge filter badge-black active" data-background-color="black"></span>
+                          <span class="badge filter badge-white" data-background-color="white"></span>
+                          <span class="badge filter badge-red" data-background-color="red"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                      </a>
+                    </li>
+                    <li class="adjustments-line">
+                      <a href="javascript:void(0)" class="switch-trigger">
+                        <p>Sidebar Mini</p>
+                        <label class="ml-auto">
+                          <div class="togglebutton switch-sidebar-mini">
+                            <label>
+                              <input type="checkbox">
+                              <span class="toggle"></span>
+                            </label>
+                          </div>
+                        </label>
+                        <div class="clearfix"></div>
+                      </a>
+                    </li>
+                    <li class="adjustments-line">
+                      <a href="javascript:void(0)" class="switch-trigger">
+                        <p>Sidebar Images</p>
+                        <label class="switch-mini ml-auto">
+                          <div class="togglebutton switch-sidebar-image">
+                            <label>
+                              <input type="checkbox" checked="">
+                              <span class="toggle"></span>
+                            </label>
+                          </div>
+                        </label>
+                        <div class="clearfix"></div>
+                      </a>
+                    </li>
+                    <li class="header-title">Images</li>
+                    <li class="active">
+                      <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="../assets/img/sidebar-1.jpg" alt="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="../assets/img/sidebar-2.jpg" alt="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="../assets/img/sidebar-3.jpg" alt="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="../assets/img/sidebar-4.jpg" alt="">
+                      </a>
+                    </li>
+                    <li class="button-container">
+                      <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-rose btn-block btn-fill">Buy Now</a>
+                      <a href="https://demos.creative-tim.com/material-dashboard-pro/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
+                        Documentation
+                      </a>
+                      <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-info btn-block">
+                        Get Free Demo!
+                      </a>
+                    </li>
+                    <li class="button-container github-star">
+                      <a class="github-button" href="https://github.com/creativetimofficial/ct-material-dashboard-pro" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+                    </li>
+                    <li class="header-title">Thank you for 95 shares!</li>
+                    <li class="button-container text-center">
+                      <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
+                      <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
+                      <br>
+                      <br>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--   Core JS Files   -->
+              <script src="/default/assets/js/core/jquery.min.js"></script>
+              <script src="/default/assets/js/core/popper.min.js"></script>
+              <script src="/default/assets/js/core/bootstrap-material-design.min.js"></script>
+              <script src="/default/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+              <!-- Plugin for the momentJs  -->
+              <script src="/default/assets/js/plugins/moment.min.js"></script>
+              <!--  Plugin for Sweet Alert -->
+              <script src="/default/assets/js/plugins/sweetalert2.js"></script>
+              <!-- Forms Validations Plugin -->
+              <script src="/default/assets/js/plugins/jquery.validate.min.js"></script>
+              <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+              <script src="/default/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+              <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+              <script src="/default/assets/js/plugins/bootstrap-selectpicker.js"></script>
+              <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+              <script src="/default/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+              <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+              <script src="/default/assets/js/plugins/jquery.dataTables.min.js"></script>
+              <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+              <script src="/default/assets/js/plugins/bootstrap-tagsinput.js"></script>
+              <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+              <script src="/default/assets/js/plugins/jasny-bootstrap.min.js"></script>
+              <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+              <script src="/default/assets/js/plugins/fullcalendar.min.js"></script>
+              <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+              <script src="/default/assets/js/plugins/jquery-jvectormap.js"></script>
+              <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+              <script src="/default/assets/js/plugins/nouislider.min.js"></script>
+              <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+              <!-- Library for adding dinamically elements -->
+              <script src="/default/assets/js/plugins/arrive.min.js"></script>
+              <!--  Google Maps Plugin    -->
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
+              <!-- Place this tag in your head or just before your close body tag. -->
+              <script async defer src="https://buttons.github.io/buttons.js"></script>
+              <!-- Chartist JS -->
+              <script src="/default/assets/js/plugins/chartist.min.js"></script>
+              <!--  Notifications Plugin    -->
+              <script src="/default/assets/js/plugins/bootstrap-notify.js"></script>
+              <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+              <script src="/default/assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
+              <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+              <script src="/default/assets/demo/demo.js"></script>
+              <script>
+                $(document).ready(function() {
+                  $().ready(function() {
+                    $sidebar = $('.sidebar');
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    @yield("content")
+                    $sidebar_img_container = $sidebar.find('.sidebar-background');
 
-  </div>
-  <!-- /.content-wrapper -->
-  {{-- <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
-    </div>
-  </footer> --}}
+                    $full_page = $('.full-page');
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+                    $sidebar_responsive = $('body > .navbar-collapse');
 
-<!-- jQuery -->
-<script src="/plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="/plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="/plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="/plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="/plugins/moment/moment.min.js"></script>
-<script src="/plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="/plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="/dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="/dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/dist/js/pages/dashboard.js"></script>
-<!-- jQuery -->
-<script src="/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables  & Plugins -->
-<script src="/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="/plugins/jszip/jszip.min.js"></script>
-<script src="/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<!-- AdminLTE App -->
-<script src="/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="/dist/js/demo.js"></script>
-<!-- Page specific script -->
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>
+                    window_width = $(window).width();
 
+                    fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+                    if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+                      if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+                        $('.fixed-plugin .dropdown').addClass('open');
+                      }
+
+                    }
+
+                    $('.fixed-plugin a').click(function(event) {
+                      // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+                      if ($(this).hasClass('switch-trigger')) {
+                        if (event.stopPropagation) {
+                          event.stopPropagation();
+                        } else if (window.event) {
+                          window.event.cancelBubble = true;
+                        }
+                      }
+                    });
+
+                    $('.fixed-plugin .active-color span').click(function() {
+                      $full_page_background = $('.full-page-background');
+
+                      $(this).siblings().removeClass('active');
+                      $(this).addClass('active');
+
+                      var new_color = $(this).data('color');
+
+                      if ($sidebar.length != 0) {
+                        $sidebar.attr('data-color', new_color);
+                      }
+
+                      if ($full_page.length != 0) {
+                        $full_page.attr('filter-color', new_color);
+                      }
+
+                      if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.attr('data-color', new_color);
+                      }
+                    });
+
+                    $('.fixed-plugin .background-color .badge').click(function() {
+                      $(this).siblings().removeClass('active');
+                      $(this).addClass('active');
+
+                      var new_color = $(this).data('background-color');
+
+                      if ($sidebar.length != 0) {
+                        $sidebar.attr('data-background-color', new_color);
+                      }
+                    });
+
+                    $('.fixed-plugin .img-holder').click(function() {
+                      $full_page_background = $('.full-page-background');
+
+                      $(this).parent('li').siblings().removeClass('active');
+                      $(this).parent('li').addClass('active');
+
+
+                      var new_image = $(this).find("img").attr('src');
+
+                      if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                        $sidebar_img_container.fadeOut('fast', function() {
+                          $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                          $sidebar_img_container.fadeIn('fast');
+                        });
+                      }
+
+                      if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                        var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                        $full_page_background.fadeOut('fast', function() {
+                          $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                          $full_page_background.fadeIn('fast');
+                        });
+                      }
+
+                      if ($('.switch-sidebar-image input:checked').length == 0) {
+                        var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+                        var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                        $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                        $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                      }
+
+                      if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+                      }
+                    });
+
+                    $('.switch-sidebar-image input').change(function() {
+                      $full_page_background = $('.full-page-background');
+
+                      $input = $(this);
+
+                      if ($input.is(':checked')) {
+                        if ($sidebar_img_container.length != 0) {
+                          $sidebar_img_container.fadeIn('fast');
+                          $sidebar.attr('data-image', '#');
+                        }
+
+                        if ($full_page_background.length != 0) {
+                          $full_page_background.fadeIn('fast');
+                          $full_page.attr('data-image', '#');
+                        }
+
+                        background_image = true;
+                      } else {
+                        if ($sidebar_img_container.length != 0) {
+                          $sidebar.removeAttr('data-image');
+                          $sidebar_img_container.fadeOut('fast');
+                        }
+
+                        if ($full_page_background.length != 0) {
+                          $full_page.removeAttr('data-image', '#');
+                          $full_page_background.fadeOut('fast');
+                        }
+
+                        background_image = false;
+                      }
+                    });
+
+                    $('.switch-sidebar-mini input').change(function() {
+                      $body = $('body');
+
+                      $input = $(this);
+
+                      if (md.misc.sidebar_mini_active == true) {
+                        $('body').removeClass('sidebar-mini');
+                        md.misc.sidebar_mini_active = false;
+
+                        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+                      } else {
+
+                        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+                        setTimeout(function() {
+                          $('body').addClass('sidebar-mini');
+
+                          md.misc.sidebar_mini_active = true;
+                        }, 300);
+                      }
+
+                      // we simulate the window Resize so the charts will get updated in realtime.
+                      var simulateWindowResize = setInterval(function() {
+                        window.dispatchEvent(new Event('resize'));
+                      }, 180);
+
+                      // we stop the simulation of Window Resize after the animations are completed
+                      setTimeout(function() {
+                        clearInterval(simulateWindowResize);
+                      }, 1000);
+
+                    });
+                  });
+                });
+              </script>
+              <!-- Sharrre libray -->
+              <script src="/default/assets/demo/jquery.sharrre.js"></script>
+              <script>
+                $(document).ready(function() {
+
+
+                  $('#facebook').sharrre({
+                    share: {
+                      facebook: true
+                    },
+                    enableHover: false,
+                    enableTracking: false,
+                    enableCounter: false,
+                    click: function(api, options) {
+                      api.simulateClick();
+                      api.openPopup('facebook');
+                    },
+                    template: '<i class="fab fa-facebook-f"></i> Facebook',
+                    url: 'https://demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html'
+                  });
+
+                  $('#google').sharrre({
+                    share: {
+                      googlePlus: true
+                    },
+                    enableCounter: false,
+                    enableHover: false,
+                    enableTracking: true,
+                    click: function(api, options) {
+                      api.simulateClick();
+                      api.openPopup('googlePlus');
+                    },
+                    template: '<i class="fab fa-google-plus"></i> Google',
+                    url: 'https://demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html'
+                  });
+
+                  $('#twitter').sharrre({
+                    share: {
+                      twitter: true
+                    },
+                    enableHover: false,
+                    enableTracking: false,
+                    enableCounter: false,
+                    buttons: {
+                      twitter: {
+                        via: 'CreativeTim'
+                      }
+                    },
+                    click: function(api, options) {
+                      api.simulateClick();
+                      api.openPopup('twitter');
+                    },
+                    template: '<i class="fab fa-twitter"></i> Twitter',
+                    url: 'https://demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html'
+                  });
+
+
+                  var _gaq = _gaq || [];
+                  _gaq.push(['_setAccount', 'UA-46172202-1']);
+                  _gaq.push(['_trackPageview']);
+
+                  (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                  })();
+
+                  // Facebook Pixel Code Don't Delete
+                  ! function(f, b, e, v, n, t, s) {
+                    if (f.fbq) return;
+                    n = f.fbq = function() {
+                      n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    };
+                    if (!f._fbq) f._fbq = n;
+                    n.push = n;
+                    n.loaded = !0;
+                    n.version = '2.0';
+                    n.queue = [];
+                    t = b.createElement(e);
+                    t.async = !0;
+                    t.src = v;
+                    s = b.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t, s)
+                  }(window,
+                    document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+                  try {
+                    fbq('init', '111649226022273');
+                    fbq('track', "PageView");
+
+                  } catch (err) {
+                    console.log('Facebook Track Error:', err);
+                  }
+
+                });
+              </script>
+              <noscript>
+                <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1" />
+              </noscript>
+              <script>
+                $(document).ready(function() {
+                  // Javascript method's body can be found in assets/js/demos.js
+                  md.initDashboardPageCharts();
+
+                  md.initVectorMap();
+
+                });
+              </script>
+              <script>
+                $(document).ready(function() {
+                  $('#datatables').DataTable({
+                    "pagingType": "full_numbers",
+                    "lengthMenu": [
+                      [10, 25, 50, -1],
+                      [10, 25, 50, "All"]
+                    ],
+                    responsive: true,
+                    language: {
+                      search: "_INPUT_",
+                      searchPlaceholder: "Search records",
+                    }
+                  });
+            
+                  var table = $('#datatable').DataTable();
+            
+                  // Edit record
+                  table.on('click', '.edit', function() {
+                    $tr = $(this).closest('tr');
+                    var data = table.row($tr).data();
+                    alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
+                  });
+            
+                  // Delete a record
+                  table.on('click', '.remove', function(e) {
+                    $tr = $(this).closest('tr');
+                    table.row($tr).remove().draw();
+                    e.preventDefault();
+                  });
+            
+                  //Like record
+                  table.on('click', '.like', function() {
+                    alert('You clicked on Like button');
+                  });
+                });
+              </script>
 </body>
+
 </html>

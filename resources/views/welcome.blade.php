@@ -20,7 +20,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Mali</b>Creances</a>
+    <h2 href="#"><b>Recou</b>vrement</h2>
 {{-- <img src="/images/logo1.jpg" alt="logo"/> --}}
   </div>
   <!-- /.login-logo -->
@@ -74,7 +74,7 @@
         </div>
       </form>
 
-    
+
 
       {{-- <p class="mb-1">
         <a href="forgot-password.html">I forgot my password</a>
