@@ -1,11 +1,6 @@
 @extends('templates.home')
 @section('navbar')
-<li class="nav-item d-none d-sm-inline-block">
-    <a href="#" class="nav-link">Remise >></a>
-  </li>
-  <li class="nav-item d-none d-sm-inline-block">
-    <a href="#" class="nav-link">Ajout Remise</a>
-  </li>
+<a class="navbar-brand" href="#">Remise => Ajout Remise</a>
 @endsection
 @section('content')
 <section class="content-header">

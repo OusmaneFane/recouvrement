@@ -5,10 +5,10 @@
       <div class="card card-stats">
         <div class="card-header card-header-warning card-header-icon">
           <div class="card-icon">
-            <i class="material-icons">weekend</i>
+            <i class="fa fa-users" aria-hidden="true"></i>
           </div>
-          <p class="card-category">Bookings</p>
-          <h3 class="card-title">184</h3>
+          <p class="card-category">Total Prospects</p>
+          <h3 class="card-title">0</h3>
         </div>
         <div class="card-footer">
           <div class="stats">
@@ -22,10 +22,10 @@
       <div class="card card-stats">
         <div class="card-header card-header-rose card-header-icon">
           <div class="card-icon">
-            <i class="material-icons">equalizer</i>
+            <i class="fa fa-id-card-o" aria-hidden="true"></i>
           </div>
-          <p class="card-category">Website Visits</p>
-          <h3 class="card-title">75.521</h3>
+          <p class="card-category">Total Contrats</p>
+          <h3 class="card-title">0</h3>
         </div>
         <div class="card-footer">
           <div class="stats">
@@ -40,8 +40,8 @@
           <div class="card-icon">
             <i class="material-icons">store</i>
           </div>
-          <p class="card-category">Revenue</p>
-          <h3 class="card-title">$34,245</h3>
+          <p class="card-category">Total Débiteurs </p>
+          <h3 class="card-title">0</h3>
         </div>
         <div class="card-footer">
           <div class="stats">
@@ -54,10 +54,10 @@
       <div class="card card-stats">
         <div class="card-header card-header-info card-header-icon">
           <div class="card-icon">
-            <i class="fa fa-twitter"></i>
+            <i class="fa fa-address-book"></i>
           </div>
-          <p class="card-category">Followers</p>
-          <h3 class="card-title">+245</h3>
+          <p class="card-category">Total Créanciers</p>
+          <h3 class="card-title">0</h3>
         </div>
         <div class="card-footer">
           <div class="stats">

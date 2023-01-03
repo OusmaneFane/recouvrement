@@ -1,17 +1,14 @@
 @extends('templates.home')
 
 @section('navbar')
-<li class="nav-item d-none d-sm-inline-block">
-    <a href="index3.html" class="nav-link">Prospect >></a>
-  </li>
-  <li class="nav-item d-none d-sm-inline-block">
-    <a href="#" class="nav-link">Modification Prospect</a>
-  </li>
+<a class="navbar-brand" href="">Prospect => Modification Prospect</a>
 @endsection
 @section('content')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
     <!-- Content Header (Page header) -->
     {{-- <section class="content-header">
@@ -76,14 +73,17 @@
                     <td>{{$data->nom_resp}}</td>
                     <td> {{$data->apporteur}}</td>
                     <td>X</td>
-                    <td class="text-right py-0 align-middle">
+                    <td  class="td-actions text-right">
                         <div class="btn-group btn-group-sm">
-                            <a href="/prospect/{{ $data->id }}/edit" ><i class="fas fa-eye"></i></a>
+                            
+                            <a href="/prospect/{{ $data->id }}/edit" ><i class="material-icons">edit</i></a>
 
                             <form method="POST" action="/prospect/{{ $data->id }}">
                                 @method('DELETE')
                                 @csrf
-                                <button class="btn btn-danger"><i class="bi bi-x-circle-fill"></i></button></td>
+                                <button type="button" rel="tooltip" class="btn btn-danger btn-round">
+                                    <i class="material-icons">close</i>
+                                  </button>
                             </form>
                           </div>
 

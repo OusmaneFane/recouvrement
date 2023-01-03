@@ -46,6 +46,7 @@
   <!-- Google Tag Manager -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
   <script>
     (function(w, d, s, l, i) {
@@ -376,7 +377,7 @@
                 <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Dashboard</a>
+            @yield("navbar")
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -452,8 +453,8 @@
                       <nav class="float-left">
                         <ul>
                           <li>
-                            <a href="https://www.creative-tim.com">
-                              Creative Tim
+                            <a href="/dashboard">
+                              Tableau de bord
                             </a>
                           </li>
                           <li>
@@ -474,11 +475,11 @@
                         </ul>
                       </nav>
                       <div class="copyright float-right">
-                        &copy;
+                        MaliCreances &copy;
                         <script>
                           document.write(new Date().getFullYear())
-                        </script>, made with <i class="material-icons">favorite</i> by
-                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+                        </script> , developed by
+                        <span  target="_blank"><b>FANE</span> Ousmane</b>.
                       </div>
                     </div>
                   </footer>
@@ -486,9 +487,9 @@
               </div>
               <div class="fixed-plugin">
                 <div class="dropdown show-dropdown">
-                  <a href="#" data-toggle="dropdown">
+                  {{-- <a href="#" data-toggle="dropdown">
                     <i class="fa fa-cog fa-2x"> </i>
-                  </a>
+                  </a> --}}
                   <ul class="dropdown-menu">
                     <li class="header-title"> Sidebar Filters</li>
                     <li class="adjustments-line">
