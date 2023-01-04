@@ -44,6 +44,7 @@ class RemiseController extends Controller
         'charge_client' => request('charge_client'),
         'nbre_dossier' => request('nbre_dossier')
         ]);
+
         if($data_remise){
             return redirect()->back()->with('success', 'Opération d\'ajout effectuée avec success');
         }
