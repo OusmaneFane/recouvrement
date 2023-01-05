@@ -9,7 +9,7 @@
     </li>
     <li class="nav-item ">
       <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
-        <i class="material-icons">image</i>
+        <i class="fa fa-users" aria-hidden="true"></i>
         <p> Prospects
           <b class="caret"></b>
         </p>
@@ -18,13 +18,13 @@
         <ul class="nav">
           <li class="nav-item ">
             <a class="nav-link" href="/add_prospect">
-              <span class="sidebar-mini"> P </span>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
               <span class="sidebar-normal"> Ajout Prospect </span>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="/edit">
-              <span class="sidebar-mini"> RS </span>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
               <span class="sidebar-normal"> Modification Prospect </span>
             </a>
           </li>
@@ -69,8 +69,8 @@
     </li>
     <li class="nav-item ">
       <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
-        <i class="material-icons">apps</i>
-        <p> Contrat                               
+        <i class="fa fa-files-o" aria-hidden="true"></i>
+        <p> Contrat
           <b class="caret"></b>
         </p>
       </a>
@@ -124,7 +124,7 @@
     </li>
     <li class="nav-item ">
       <a class="nav-link" data-toggle="collapse" href="#formsExamples">
-        <i class="material-icons">content_paste</i>
+        <i class="fa fa-address-card-o" aria-hidden="true"></i>
         <p> Créancier
           <b class="caret"></b>
         </p>
@@ -160,7 +160,7 @@
     </li>
     <li class="nav-item ">
       <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
-        <i class="material-icons">grid_on</i>
+        <i class="fa fa-minus-square" aria-hidden="true"></i>
         <p> Remise
           <b class="caret"></b>
         </p>
@@ -169,13 +169,13 @@
         <ul class="nav">
           <li class="nav-item ">
             <a class="nav-link" href="/add_remise">
-              <span class="sidebar-mini"> RT </span>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
               <span class="sidebar-normal"> Ajout Remise </span>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="/edit_remise">
-              <span class="sidebar-mini"> ET </span>
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
               <span class="sidebar-normal"> Modification Remise </span>
             </a>
           </li>
@@ -190,7 +190,7 @@
     </li>
     <li class="nav-item active ">
       <a class="nav-link" data-toggle="collapse" href="#mapsExamples">
-        <i class="material-icons">place</i>
+        <i class="fa fa-id-badge" aria-hidden="true"></i>
         <p> Créance
           <b class="caret"></b>
         </p>
@@ -199,45 +199,40 @@
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="/add_debiteur">
-              <span class="sidebar-mini"> GM </span>
+              <i class="fa fa-plus-square" aria-hidden="true"></i>
               <span class="sidebar-normal"> Ajout Débiteur </span>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="/import_creance">
-              <span class="sidebar-mini"> FSM </span>
+                <i class="fa fa-file-excel-o" aria-hidden="true"></i>
               <span class="sidebar-normal"> Import Créance </span>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
-              <span class="sidebar-mini"> VM </span>
+            <a class="nav-link" href="/historique">
+                <i class="fa fa-history" aria-hidden="true"></i>
               <span class="sidebar-normal"> Historique Créance </span>
             </a>
           </li>
           <li class="nav-item ">
               <a class="nav-link" href="#">
-                <i class="material-icons">widgets</i>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 <p> Modification Créance </p>
               </a>
             </li>
           <li class="nav-item active">
               <a class="nav-link" href="/add_creance">
-                <i class="material-icons">timeline</i>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
                 <p> Ajout Créance </p>
               </a>
           </li>
         </ul>
       </div>
     </li>
-   
-   
-    <li class="nav-item ">
-      <a class="nav-link" href="/default/examples/calendar.html">
-        <i class="material-icons">date_range</i>
-        <p> Calendar </p>
-      </a>
-    </li>
+
+
+    
   </ul>
 @endsection
 @section('navbar')
@@ -254,7 +249,7 @@
                     <div class="card-header">
                       <h3 class="card-title">Liste des Prospects</h3>
                     </div>
-  
+
   {{-- <form action="#" method="get">
     @csrf
         <div class="row mt-3">

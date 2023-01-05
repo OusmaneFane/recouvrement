@@ -53,6 +53,8 @@ Route::middleware(['list'])->group(function () {
 
     Route::post('/import_creance', [CreanceControlleur::class, 'import_creance']);
     Route::get('/dashboard', [LoginController::class, 'dash'])->name('dashboard');
+
+    Route::get('/historique', [CreanceControlleur::class, 'hist'])->name('historique');
 });
 
 Auth::routes();

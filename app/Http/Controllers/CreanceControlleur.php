@@ -6,6 +6,7 @@ use App\Models\Import;
 use App\Models\Creance;
 use App\Models\Debiteur;
 use App\Models\Add_creance;
+use App\Models\Data_Remise;
 use Illuminate\Http\Request;
 use App\Models\Import_creance;
 use Illuminate\Support\Facades\DB;
@@ -124,7 +125,7 @@ class CreanceControlleur extends Controller
         return view('/debiteur.import');
     }
     public function import_creance(Request $request){
-    
+
                 // Valider les données du formulaire
                 request()->validate([
                     'file' => 'required|file|max:1024', // Taille maximale du fichier : 1 Mo
@@ -136,11 +137,11 @@ class CreanceControlleur extends Controller
 
                 // Récupérer le fichier téléchargé
                 $file = $request->file('file');
-        
+
 
                 // Déplacer le fichier dans le répertoire de stockage
                 $path = $file->store('uploads');
-                
+
                 // Enregistrer les informations du fichier dans la base de données
              $data = Import::create([
                     'code_creancier' => request('code_creancier'),
@@ -157,6 +158,20 @@ class CreanceControlleur extends Controller
                 // Rediriger l'utilisateur vers la page de destination
                 return redirect()->back()->with('success', 'File uploaded successfully');
 
+    }
+
+    public function hist(){
+            $data = DB::table('data__remises')
+            ->join('creances', 'data__remises.code_creancier', '=', 'creances.code_creance')
+            ->join('imports', 'data__remises.code_creancier', '=', 'imports.code_creancier')
+            ->select('data__remises.code_creancier as code_creancier_remises', 'creances.code_creance as code_creance_creances', 'imports.*')
+            ->get();
+
+
+
+
+
+        return view('/debiteur.historique', ['data'=>$data]);
     }
 
 }

@@ -67,7 +67,7 @@
   <!-- End Google Tag Manager -->
 </head>
 
-<body class="">
+<body >
   <!-- Extra details for Live View on GitHub Pages -->
   <!-- Google Tag Manager (noscript) -->
   <noscript>
@@ -82,10 +82,10 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="#" class="simple-text logo-mini">
           CT
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="#" class="simple-text logo-normal">
           Recouvrement
         </a>
       </div>
