@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="/default/assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard PRO by Creative Tim
+    @yield('title', 'Recouvrement')
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!-- Extra details for Live View on GitHub Pages -->
@@ -83,7 +83,7 @@
     -->
       <div class="logo">
         <a href="#" class="simple-text logo-mini">
-          CT
+          APP
         </a>
         <a href="#" class="simple-text logo-normal">
           Recouvrement
@@ -92,7 +92,7 @@
       <div class="sidebar-wrapper">
         <div class="user">
           <div class="photo">
-            <img src="/default/assets/img/faces/avatar.jpg" />
+            <img src="/default/assets/img/faces/mioi.jpg" />
           </div>
           <div class="user-info">
             <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -126,7 +126,7 @@
           </div>
         </div>
         @yield('nav')
-        
+
       </div>
     </div>
     <div class="main-panel">
@@ -170,7 +170,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
+                  {{-- <span class="notification"></span> --}}
                   <p class="d-lg-none d-md-block">
                     Some Actions
                   </p>
@@ -194,7 +194,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="/logout">Log out</a>
                 </div>
               </li>
             </ul>
@@ -205,9 +205,9 @@
       <div class="content">
         <div class="content">
           <div class="container-fluid">
-           
+
                 @yield("content")
-            
+
                       </div>
                     </div>
                   </div>
@@ -220,21 +220,21 @@
                               Tableau de bord
                             </a>
                           </li>
-                          <li>
+                          {{-- <li>
                             <a href="https://creative-tim.com/presentation">
                               About Us
                             </a>
-                          </li>
-                          <li>
+                          </li> --}}
+                          {{-- <li>
                             <a href="http://blog.creative-tim.com">
                               Blog
                             </a>
-                          </li>
-                          <li>
+                          </li> --}}
+                          {{-- <li>
                             <a href="https://www.creative-tim.com/license">
                               Licenses
                             </a>
-                          </li>
+                          </li> --}}
                         </ul>
                       </nav>
                       <div class="copyright float-right">
@@ -692,23 +692,23 @@
                       searchPlaceholder: "Search records",
                     }
                   });
-            
+
                   var table = $('#datatable').DataTable();
-            
+
                   // Edit record
                   table.on('click', '.edit', function() {
                     $tr = $(this).closest('tr');
                     var data = table.row($tr).data();
                     alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
                   });
-            
+
                   // Delete a record
                   table.on('click', '.remove', function(e) {
                     $tr = $(this).closest('tr');
                     table.row($tr).remove().draw();
                     e.preventDefault();
                   });
-            
+
                   //Like record
                   table.on('click', '.like', function() {
                     alert('You clicked on Like button');

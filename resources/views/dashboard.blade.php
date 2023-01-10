@@ -1,4 +1,7 @@
 @extends('templates.home')
+@section('title')
+Tableau de Bord
+@endsection
 @section('nav')
 <ul class="nav">
             <li class="nav-item active ">
@@ -70,7 +73,7 @@
             <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
                 <i class="fa fa-files-o" aria-hidden="true"></i>
-                <p> Contrat                               
+                <p> Contrat
                 <b class="caret"></b>
                 </p>
             </a>
@@ -230,8 +233,8 @@
                 </ul>
             </div>
             </li>
-        
-        
+
+
             {{-- <li class="nav-item ">
             <a class="nav-link" href="/default/examples/calendar.html">
                 <i class="material-icons">date_range</i>
@@ -253,8 +256,8 @@
         </div>
         <div class="card-footer">
           <div class="stats">
-            <i class="material-icons text-danger">warning</i>
-            <a href="#pablo">Get More Space...</a>
+            {{-- <i class="material-icons text-danger">warning</i>
+            <a href="#pablo">Get More Space...</a> --}}
           </div>
         </div>
       </div>
@@ -263,14 +266,14 @@
       <div class="card card-stats">
         <div class="card-header card-header-rose card-header-icon">
           <div class="card-icon">
-            <i class="fa fa-id-card-o" aria-hidden="true"></i>
+            <i class="fa fa-files-o" aria-hidden="true"></i>
           </div>
           <p class="card-category">Total Contrats</p>
           <h3 class="card-title">0</h3>
         </div>
         <div class="card-footer">
           <div class="stats">
-            <i class="material-icons">local_offer</i> Tracked from Google Analytics
+            {{-- <i class="material-icons">local_offer</i> Tracked from Google Analytics --}}
           </div>
         </div>
       </div>
@@ -279,14 +282,14 @@
       <div class="card card-stats">
         <div class="card-header card-header-success card-header-icon">
           <div class="card-icon">
-            <i class="material-icons">store</i>
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
           </div>
           <p class="card-category">Total Débiteurs </p>
           <h3 class="card-title">0</h3>
         </div>
         <div class="card-footer">
           <div class="stats">
-            <i class="material-icons">date_range</i> Last 24 Hours
+            {{-- <i class="material-icons">date_range</i> Last 24 Hours --}}
           </div>
         </div>
       </div>
@@ -302,7 +305,7 @@
         </div>
         <div class="card-footer">
           <div class="stats">
-            <i class="material-icons">update</i> Just Updated
+            {{-- <i class="material-icons">update</i> Just Updated --}}
           </div>
         </div>
       </div>

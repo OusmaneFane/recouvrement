@@ -26,6 +26,11 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user()->name;
-        return view('/templates/home', ['user'=>$user]);
+        return view('/google2fa/index', ['user'=>$user]);
+    }
+    public function index2()
+    {
+        $user = Auth::user()->name;
+        return view('/home', ['user'=>$user]);
     }
 }

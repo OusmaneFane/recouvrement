@@ -1,4 +1,7 @@
 @extends('templates.home')
+@section('title')
+Import Créance
+@endsection
 @section('nav')
 <ul class="nav">
     <li class="nav-item">

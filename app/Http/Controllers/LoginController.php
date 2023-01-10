@@ -34,4 +34,13 @@ class LoginController extends Controller
     public function dash(){
         return view('dashboard');
     }
+    public function logout()
+    {
+        if(session()->has('PasseUser')){
+            session()->pull('PasseUser');
+            return redirect('/');
+        }else{
+            return redirect('/');
+        }
+    }
 }

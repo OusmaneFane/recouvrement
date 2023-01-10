@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="/default//assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard PRO by Creative Tim
+    Recouvrement | Connexion
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!-- Extra details for Live View on GitHub Pages -->
@@ -77,7 +77,7 @@
             <img src="/images/logo1.jpg" />
           </div>
       <div class="navbar-wrapper">
-        <a class="navbar-brand" href="#pablo">Mali Creances</a>
+        <a class="navbar-brand" href="https://malicreances-sa.com/">Mali Creances-sa</a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
         <span class="sr-only">Toggle navigation</span>
@@ -98,12 +98,12 @@
             </a>
           </li> --}}
           <li class="nav-item  active ">
-            <a href="../pages/login.html" class="nav-link">
+            <a href="/" class="nav-link">
               <i class="material-icons">fingerprint</i> Login
             </a>
           </li>
           <li class="nav-item ">
-            <a href="../pages/lock.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="material-icons">lock_open</i> Lock
             </a>
           </li>
@@ -137,7 +137,7 @@
                   </div>
                 </div>
                 <div class="card-body ">
-                  <p class="card-description text-center">Connexion</p>
+                  <p class="card-description text-center">Connectez-vous</p>
                   <span class="bmd-form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">

@@ -1,4 +1,7 @@
 @extends('templates.home')
+@section('title')
+Historique Créance
+@endsection
 @section('nav')
 <ul class="nav">
     <li class="nav-item">
@@ -264,7 +267,7 @@
                               <th>REMISE</th>
                               <th>NATURE</th>
                               <th>NOM FICHIER</th>
-                              <th>STATUT</th>éz
+                              <th>STATUT</th>
                               <th>DATE DEBUT</th>
                               <th>DATE FIN</th>
                           </tr>
@@ -272,14 +275,14 @@
                       <tbody>
                         @foreach($data as $item)
                       <tr>
+                          <td>{{ $item->id }}</td>
+                          <td>{{ $item->created_at }}</td>
+                          <td>{{ $item->id }}</td>
+                          <td>{{ $item->nom_remise }}</td>
+                          <td>{{ $item->nom_remise }}</td>
                           <td>{{ $item->name }}</td>
                           <td>{{ $item->name }}</td>
-                          <td>{{ $item->name }}</td>
-                          <td>{{ $item->name }}</td>
-                          <td>{{ $item->name }}</td>
-                          <td>{{ $item->name }}</td>
-                          <td>{{ $item->name }}</td>
-                          <td>{{ $item->name }}</td>
+                          <td>Importer avec succès</td>
                           <td>{{ $item->name }}</td>
                           <td>{{ $item->name }}</td>
 

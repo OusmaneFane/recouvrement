@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RemiseController;
 use App\Http\Controllers\CreanceControlleur;
 use App\Http\Controllers\ProspectController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::get('/', function () {
 });
 Route::post('/check', [LoginController::class, 'check']);
 Route::get('/login', [LoginController::class, 'login']);
+Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::middleware(['list'])->group(function () {
     Route::get('/prospect', [ProspectController::class, 'page'])->name('prospect');
@@ -55,8 +57,18 @@ Route::middleware(['list'])->group(function () {
     Route::get('/dashboard', [LoginController::class, 'dash'])->name('dashboard');
 
     Route::get('/historique', [CreanceControlleur::class, 'hist'])->name('historique');
+    Route::get('/edit_creance', [CreanceControlleur::class, 'edit_creance'])->name('edit_creance');
+
 });
 
 Auth::routes();
+Route::middleware(['2fa'])->group(function () {
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::post('/2fa', function () {
+        return redirect(route('homesite'));
+    })->name('2fa');
+});
+Route::get('/complete-registration', [RegisterController::class, 'completeRegistration'])->name('complete.registration');
+
+Route::get('/homesite', [App\Http\Controllers\HomeController::class, 'index2'])->name('homesite');

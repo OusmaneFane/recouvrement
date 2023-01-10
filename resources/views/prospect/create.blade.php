@@ -1,6 +1,9 @@
 @extends('templates.home')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+@section('title')
+Ajout Prospect
+@endsection
 @section('nav')
 <ul class="nav">
     <li class="nav-item ">
@@ -72,7 +75,7 @@
     <li class="nav-item ">
       <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
         <i class="fa fa-files-o" aria-hidden="true"></i>
-        <p> Contrat                               
+        <p> Contrat
           <b class="caret"></b>
         </p>
       </a>
@@ -232,9 +235,9 @@
         </ul>
       </div>
     </li>
-   
-   
-    
+
+
+
   </ul>
 @endsection
 @section('navbar')
@@ -247,13 +250,12 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
-            
+
           <div class="card ">
             <div class="card-header card-header-rose card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">mail_outline</i>
-              </div>
-              <h4 class="card-title">Stacked Form</h4>
+                <div class="card-text">
+                    <h4 class="card-title">1</h4>
+                  </div>
             </div>
             <div class="card-body ">
                 <div class="form-horizontal">
@@ -292,16 +294,15 @@
 
                 </div>
             </div>
-            
+
           </div>
         </div>
         <div class="col-md-6">
           <div class="card ">
             <div class="card-header card-header-rose card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">contacts</i>
-              </div>
-              <h4 class="card-title">Horizontal Form</h4>
+                <div class="card-text">
+                    <h4 class="card-title">2</h4>
+                  </div>
             </div>
             <div class="card-body ">
               <div class="form-horizontal">
@@ -337,48 +338,48 @@
                       </div>
                     </div>
                   </div>
-               
+
             </div>
             </div>
-           
+
           </div>
         </div>
         <div class="col-md-12">
           <div class="card ">
             <div class="card-header card-header-rose card-header-text">
               <div class="card-text">
-                <h4 class="card-title">Form Elements</h4>
+                <h4 class="card-title">3</h4>
               </div>
             </div>
             <div class="card-body ">
                 <div class="row g-3">
                     <div class="col-sm-4">
-    
+
                     <input type="text" class="form-control" placeholder="Forme Juridique" name="forme_juridique" value="{{$data->forme_juridique}}"><br>
                     <input type="text" class="form-control" placeholder="Secteur d'activité" name="secteur_activite" value="{{$data->secteur_activite}}"><br>
                     <input type="text" class="form-control" placeholder="RC" name="rc" value="{{$data->rc}}"><br>
                     <input type="text" class="form-control" placeholder="Nom responsable" name="nom_resp" value="{{$data->nom_resp}}"><br>
-    
+
                     </div>
                     <div class="col-sm-4">
                     <input type="text" class="form-control" placeholder="Raison Sociale" name="raison_sociale" value="{{$data->raison_sociale}}"><br>
                     <input type="text" class="form-control" placeholder="Activité" name="activite" value="{{$data->activite}}"><br>
                     <input type="text" class="form-control" placeholder="MF/Réf Patiente" name="mf_ref" value="{{$data->mf_ref}}"><br>
                     <input type="text" class="form-control" placeholder="Prénom Responsable" name="prenom_resp" value="{{$data->prenom_resp}}"><br>
-    
+
                     </div>
                     <div class="col-sm-4">
                     <input type="text" class="form-control" placeholder="Abréviation" name="abrev" value="{{$data->abrev}}"><br>
                     <input type="text" class="form-control" placeholder="Désignation" name="designation" value="{{$data->designation}}"><br>
                     <input type="text" class="form-control" placeholder="Type TVA" name="type_tva" value="{{$data->type_tva}}"><br>
                     <input type="text" class="form-control" placeholder="Qualité Responsable" name="qua_resp" value="{{$data->qua_resp}}">
-    
+
                     </div>
                 </div>
             </div>
           </div>
         </div>
-        
+
         {{-- <div class="col-md-12">
           <div class="card ">
             <div class="card-header card-header-rose card-header-text">

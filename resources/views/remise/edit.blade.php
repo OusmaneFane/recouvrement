@@ -1,4 +1,7 @@
 @extends('templates.home')
+@section('title')
+Modification Remise
+@endsection
 @section('nav')
 <ul class="nav">
     <li class="nav-item">
