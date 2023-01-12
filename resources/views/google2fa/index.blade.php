@@ -5,7 +5,7 @@
     <div class="row justify-content-center align-items-center " style="height: 70vh;S">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading font-weight-bold">Register</div>
+                <div class="panel-heading font-weight-bold">Confirmation</div>
                 <hr>
                 @if($errors->any())
                     <b style="color: red">{{$errors->first()}}</b>
@@ -17,8 +17,8 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <p>Please enter the  <strong>OTP</strong> generated on your Authenticator App. <br> Ensure you submit the current one because it refreshes every 30 seconds.</p>
-                            <label for="one_time_password" class="col-md-4 control-label">One Time Password</label>
+                            <p>Veuillez saisir  <strong>l'OTP</strong>généré sur votre application d'authentification. <br>Assurez-vous de soumettre l'actuel car il s'actualise toutes les 30 secondes.</p>
+                            <label for="one_time_password" class="col-md-4 control-label">Mot de passe à usage unique</label>
 
 
                             <div class="col-md-6">
@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Login
+                                    Confirmer
                                 </button>
                             </div>
                         </div>

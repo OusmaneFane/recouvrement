@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+
     public function check(Request $request){
         $request->validate([
             'name' => 'required',
@@ -23,7 +24,7 @@ class LoginController extends Controller
             // Authentication passed...
             $request->session()->put('PasseUser', $userInfo->id);
 
-           
+
             return redirect()->route('dashboard');
         }
 
@@ -31,16 +32,28 @@ class LoginController extends Controller
             'email' => 'Les informations de connexion sont incorrectes.',
         ]);
     }
+
+
     public function dash(){
         return view('dashboard');
     }
-    public function logout()
-    {
-        if(session()->has('PasseUser')){
-            session()->pull('PasseUser');
-            return redirect('/');
-        }else{
-            return redirect('/');
+
+        public function logout()
+        {
+            if (!auth()->user()->google2fa_secret) {
+                session()->forget('2fa_token');
+                auth()->logout();
+                return redirect('login')->with('fail', 'Vous avez été déconnecté en raison d\'une erreur d\'authentification à deux facteurs.');
+            }
+            if(session()->has('PasseUser')){
+                session()->pull('PasseUser');
+                auth()->logout();
+                return redirect('/');
+            }else{
+                auth()->logout();
+                return redirect('/');
+            }
         }
-    }
+
+
 }

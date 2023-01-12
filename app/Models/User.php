@@ -52,13 +52,20 @@ class User extends Authenticatable
      * @param  string  $value
      * @return \Illuminate\Database\Eloquent\Casts\Attribute
      */
+   
     public function setGoogle2faSecretAttribute($value)
     {
          $this->attributes['google2fa_secret'] = encrypt($value);
     }
 
-    public function getGoogle2faSecretAttribute($value)
-    {
+    public function getGoogle2faSecretAttribute(?string $value): ?string {
+        if (!$value) {
+            session()->forget('2fa_token');
+            auth()->logout();
+            return null;
+        }
         return decrypt($value);
     }
+
+
 }
