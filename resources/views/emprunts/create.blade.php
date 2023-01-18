@@ -1,11 +1,10 @@
-@extends('templates.home')
+@extends('templates.home2')
 @section('title')
-Modification Prospect
 @endsection
 @section('nav')
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/dashboard">
+    <li class="nav-item ">
+      <a class="nav-link" href="/dashboard2">
         <i class="material-icons">dashboard</i>
         <p> Tableau de board </p>
       </a>
@@ -13,22 +12,22 @@ Modification Prospect
     <li class="nav-item active">
       <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
         <i class="fa fa-users" aria-hidden="true"></i>
-        <p> Prospects
+        <p> Emprunteurs
           <b class="caret"></b>
         </p>
       </a>
       <div class="collapse show" id="pagesExamples">
         <ul class="nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="/add_prospect">
+          <li class="nav-item active ">
+            <a class="nav-link" href="/add_emprunt">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
-              <span class="sidebar-normal"> Ajout Prospect </span>
+              <span class="sidebar-normal"> Ajout Emprunt </span>
             </a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/edit">
+          <li class="nav-item ">
+            <a class="nav-link" href="/edit_emprunt">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-              <span class="sidebar-normal"> Modification Prospect </span>
+              <span class="sidebar-normal"> Modification Emprunt </span>
             </a>
           </li>
           {{-- <li class="nav-item ">
@@ -238,112 +237,177 @@ Modification Prospect
 
   </ul>
 @endsection
-
 @section('navbar')
-<a class="navbar-brand" href="">Prospect => Modification Prospect</a>
+
+<a class="navbar-brand" href="#">Emprunteurs => Ajout Emprunteur</a>
+
 @endsection
+
 @section('content')
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
-    <!-- Content Header (Page header) -->
-    {{-- <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Prospect => Modification Prospect</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section> --}}
-    <div class="results">
-        @if(Session::get('success'))
-        <div class="alert alert-success">
-            {{ Session::get('success') }}
-        </div>
-        @endif
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-        @if(Session::get('fail'))
-        <div class="alert alert-danger">
-            {{ Session::get('fail') }}
-        </div>
-        @endif
+<div class="results">
+    @if(Session::get('success'))
+    <div class="alert alert-success">
+        {{ Session::get('success') }}
     </div>
+    @endif
 
-    <!-- Main content -->
-    <section class="content mt-3">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
+    @if(Session::get('fail'))
+    <div class="alert alert-danger">
+        {{ Session::get('fail') }}
+    </div>
+    @endif
+</div>
 
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Liste des Prospects</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="datatable" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>Code Creancier</th>
-                    <th>Type</th>
-                    <th>Nature</th>
-                    <th>Nom/Prenom/RS</th>
-                    <th>Agence</th>
-                    <th></th>
+<form action="/add_emprunt" method="POST">
+    @csrf
+            <div class="container-fluid">
+                <div class="row">
+                <div class="col-sm">
+                    <div class="card ">
+                        <div class="card-header card-header-rose card-header-text">
+                            <div class="card-text">
+                            <h4 class="card-title"><i class="fas fa-id-card"></i> Informations de l'emprunteur</h4>
+                            </div>
+                        </div>
+
+                        <div class="card-body ">
+                            <div class="form-horizontal">
+                        <div class="form-group row">
+                        <label for="inputEmail3" class="col-md-5 col-form-label"><i class="fas fa-id-card"></i> Identifiant:</label>
+                        <div class="col-md-5">
+                            <div class="form-group has-default">
+                                <input type="text" class="form-control" name="identifiant" id="identifiant">
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="inputPassword3" class="col-sm-3 col-form-label"><i class="fas fa-user"></i> Nom:</label>
+                        <div class="col-md-7">
+                            <div class="form-group has-default">
+                                <input type="text" class="form-control" name="nom" id="nom">
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-3 col-form-label"><i class="fas fa-map-marker-alt"></i> Adresse:</label>
+                            <div class="col-md-7">
+                            <div class="form-group has-default">
+                                <input type="text" class="form-control" name="adresse" id="adresse">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-5 col-form-label"><i class="fas fa-phone"></i> Numéro de téléphone :</label>
+                            <div class="col-md-7">
+                            <div class="form-group has-default">
+                                <input type="text" class="form-control" name="telephone" id="telephone">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-5 col-form-label"><i class="fas fa-envelope"></i> Adresse e-mail :</label>
+                            <div class="col-md-7">
+                            <div class="form-group has-default">
+                                <input type="text" class="form-control" name="email" id="email">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
 
 
-                  </tr>
-                  </thead>
-                  <tbody>
-                    @foreach ($data_prospects as $data)
-                  <tr>
-                    <td>{{$data->prospect_type}}</td>
-                    <td>{{$data->data}}</td>
-                    <td>{{$data->nom_resp}}</td>
-                    <td> {{$data->apporteur}}</td>
-                    <td>X</td>
-                    <td  class="td-actions text-right">
-                        <div class="btn-group btn-group-sm">
-
-                            <a href="/prospect/{{ $data->id }}/edit" ><i class="material-icons">edit</i></a>
-
-                            <form method="POST" action="/prospect/{{ $data->id }}">
-                                @method('DELETE')
-                                @csrf
-                                <button type="button" rel="tooltip" class="btn btn-danger btn-round">
-                                    <i class="material-icons">close</i>
-                                  </button>
-                            </form>
-                          </div>
-
-
-
-
-                  </tr>
-                    @endforeach
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
             </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
+            <div class="col-sm">
+                <div class="card ">
+                    <div class="card-header card-header-rose card-header-text">
+                    <div class="card-text">
+                        <h4 class="card-title"><i class="fas fa-dollar-sign"></i> Informations financières:</h4>
+                    </div>
+                    </div>
+
+                    <div class="card-body ">
+                        <div class="form-horizontal">
+                        <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-5 col-form-label"><i class="fas fa-dollar-sign"></i> Informations financières:</label>
+                        <div class="col-md-7">
+                            <div class="form-group has-default">
+                                <textarea class="form-control" name="infofinancieres" id="infofinancieres"></textarea>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="inputPassword3" class="col-sm-5 col-form-label"><i class="fas fa-file-alt"></i> Détails du prêt:</label>
+                        <div class="col-md-7">
+                            <div class="form-group has-default">
+                                <textarea class="form-control" name="detailsdupret" id="detailsdupret"></textarea>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-5 col-form-label"><i class="fas fa-credit-card"></i> Informations de paiement:</label>
+                            <div class="col-md-7">
+                            <div class="form-group has-default">
+                                <textarea class="form-control" name="infopaiement" id="infopaiement"></textarea>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm">
+
+                <div class="card ">
+                    <div class="card-header card-header-rose card-header-text">
+                    <div class="card-text">
+                        <h4 class="card-title">Détails</h4>
+                    </div>
+                    </div>
+
+                    <div class="card-body ">
+                        <div class="form-horizontal">
+                        <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-5 col-form-label"><i class="fas fa-history"></i> Historique des communications:</label>
+                        <div class="col-md-7">
+                            <div class="form-group has-default">
+                                <textarea class="form-control" name="historique" id="historique"></textarea>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="inputPassword3" class="col-sm-5 col-form-label"><i class="fas fa-money-bill"></i> Statut de la créance:</label>
+                        <div class="col-md-7">
+                            <div class="form-group has-default">
+                                <select class="form-control" name="statutcreance" id="statutcreance">
+                                    <option value="en cours de recouvrement">En cours de recouvrement</option>
+                                    <option value="résolue">Résolue</option>
+                                </select>
+                        </div>
+                        </div>
+                        </div>
+                        
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary ">Ajouter</button>
+            </div>
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+    </div>
+</form>
 
 @endsection

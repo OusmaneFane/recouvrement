@@ -25,7 +25,7 @@ class LoginController extends Controller
             $request->session()->put('PasseUser', $userInfo->id);
 
 
-            return redirect()->route('dashboard');
+            return redirect()->route('dashboard2');
         }
 
         return back()->withErrors([
@@ -53,6 +53,9 @@ class LoginController extends Controller
                 auth()->logout();
                 return redirect('/');
             }
+        }
+        public function dash2(){
+            return view('dashboard2');
         }
 
 

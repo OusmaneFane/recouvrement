@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RemiseController;
+use App\Http\Controllers\EmpruntController;
 use App\Http\Controllers\CreanceControlleur;
 use App\Http\Controllers\ProspectController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -72,3 +73,28 @@ Route::middleware(['2fa'])->group(function () {
 Route::get('/complete-registration', [RegisterController::class, 'completeRegistration'])->name('complete.registration');
 
 Route::get('/homesite', [App\Http\Controllers\HomeController::class, 'index2'])->name('homesite');
+
+
+
+
+
+// Dashboard2
+Route::get('/dashboard2', [LoginController::class, 'dash2'])->name('dashboard2');
+//emprunteurs
+Route::get('/add_emprunt', [EmpruntController::class, 'add_emprunt']);
+Route::post('/add_emprunt', [EmpruntController::class, 'store']);
+Route::get('/edit_emprunt', [EmpruntController::class, 'edit_emprunt'])->name('edit_emprunt');
+
+Route::get('/emprunteur/{data}/edit', [EmpruntController::class, 'data_edit'])->name('edit');
+Route::put('/emprunteur/{data}', [EmpruntController::class, 'update'])->name('update');
+Route::delete('/emprunteur/{data}', [EmpruntController::class, 'destroy'])->name('destroy');
+
+
+Route::get('/dossiers', 'DossierController@index')->name('dossiers.index');
+Route::get('/dossiers/create', 'DossierController@create')->name('dossiers.create');
+Route::post('/dossiers', 'DossierController@store')->name('dossiers.store');
+Route::get('/dossiers/{id}', 'DossierController@show')->name('dossiers.show');
+Route::get('/dossiers/{id}/edit', 'DossierController@edit')->name('dossiers.edit');
+Route::put('/dossiers/{id}', 'DossierController@update')->name('dossiers.update');
+Route::delete('/dossiers/{id}', 'DossierController@destroy')->name('dossiers.destroy');
+

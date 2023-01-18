@@ -1,11 +1,10 @@
-@extends('templates.home')
+@extends('templates.home2')
 @section('title')
-Modification Prospect
 @endsection
 @section('nav')
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/dashboard">
+    <li class="nav-item ">
+      <a class="nav-link" href="/dashboard2">
         <i class="material-icons">dashboard</i>
         <p> Tableau de board </p>
       </a>
@@ -13,22 +12,22 @@ Modification Prospect
     <li class="nav-item active">
       <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
         <i class="fa fa-users" aria-hidden="true"></i>
-        <p> Prospects
+        <p> Emprunteurs
           <b class="caret"></b>
         </p>
       </a>
       <div class="collapse show" id="pagesExamples">
         <ul class="nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="/add_prospect">
+          <li class="nav-item">
+            <a class="nav-link" href="/add_emprunt">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
-              <span class="sidebar-normal"> Ajout Prospect </span>
+              <span class="sidebar-normal"> Ajout Emprunt </span>
             </a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/edit">
+          <li class="nav-item active ">
+            <a class="nav-link" href="/edit_emprunt">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-              <span class="sidebar-normal"> Modification Prospect </span>
+              <span class="sidebar-normal"> Modification Emprunt </span>
             </a>
           </li>
           {{-- <li class="nav-item ">
@@ -238,112 +237,91 @@ Modification Prospect
 
   </ul>
 @endsection
-
 @section('navbar')
-<a class="navbar-brand" href="">Prospect => Modification Prospect</a>
+
+<a class="navbar-brand" href="#">Emprunteurs => Modification Emprunteur</a>
+
 @endsection
+
 @section('content')
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
-    <!-- Content Header (Page header) -->
-    {{-- <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Prospect => Modification Prospect</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section> --}}
-    <div class="results">
-        @if(Session::get('success'))
-        <div class="alert alert-success">
-            {{ Session::get('success') }}
-        </div>
-        @endif
-
-        @if(Session::get('fail'))
-        <div class="alert alert-danger">
-            {{ Session::get('fail') }}
-        </div>
-        @endif
+<div class="results">
+    @if(Session::get('success'))
+    <div class="alert alert-success">
+        {{ Session::get('success') }}
     </div>
+    @endif
 
-    <!-- Main content -->
-    <section class="content mt-3">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
+    @if(Session::get('fail'))
+    <div class="alert alert-danger">
+        {{ Session::get('fail') }}
+    </div>
+    @endif
+</div>
 
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Liste des Prospects</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="datatable" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>Code Creancier</th>
-                    <th>Type</th>
-                    <th>Nature</th>
-                    <th>Nom/Prenom/RS</th>
-                    <th>Agence</th>
-                    <th></th>
+<!-- Main content -->
+<section class="content mt-3">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
 
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Liste des Emprunteurs</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="datatable" class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>Id Emprunteur</th>
+                <th>Nom</th>
+                <th>Téléphone</th>
+                <th>Historique</th>
+                <th>Statut Creance</th>
+                <th>Date de création</th>
+                <th>Modification</th>
 
-                  </tr>
-                  </thead>
-                  <tbody>
-                    @foreach ($data_prospects as $data)
-                  <tr>
-                    <td>{{$data->prospect_type}}</td>
-                    <td>{{$data->data}}</td>
-                    <td>{{$data->nom_resp}}</td>
-                    <td> {{$data->apporteur}}</td>
-                    <td>X</td>
-                    <td  class="td-actions text-right">
+              </tr>
+              </thead>
+              <tbody>
+                @foreach ($emprunt as $data)
+              <tr>
+                <td>{{$data->identifiant}}</td>
+                <td>{{$data->nom}}</td>
+                <td>{{$data->telephone}}</td>
+                <td>{{$data->historique}}</td>
+                <td>{{$data->statutcreance}}</td>
+                <td>{{$data->created_at}}</td> 
+                <td>
                         <div class="btn-group btn-group-sm">
 
-                            <a href="/prospect/{{ $data->id }}/edit" ><i class="material-icons">edit</i></a>
+                            <a href="/emprunteur/{{ $data->id }}/edit" ><i class="material-icons">edit</i></a>
 
-                            <form method="POST" action="/prospect/{{ $data->id }}">
+                            <form method="POST" action="/emprunteur/{{ $data->id }}">
                                 @method('DELETE')
                                 @csrf
                                 <button type="button" rel="tooltip" class="btn btn-danger btn-round">
-                                    <i class="material-icons">close</i>
-                                  </button>
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
                             </form>
-                          </div>
-
-
-
-
-                  </tr>
-                    @endforeach
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
+                        </div>
+                </td>
+                </tr>
+                @endforeach
+              </tfoot>
+            </table>
           </div>
-          <!-- /.col -->
+          <!-- /.card-body -->
         </div>
-        <!-- /.row -->
+        <!-- /.card -->
       </div>
-      <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
 
 @endsection
