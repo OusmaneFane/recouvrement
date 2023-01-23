@@ -9,6 +9,8 @@ use App\Http\Controllers\EmpruntController;
 use App\Http\Controllers\CreanceControlleur;
 use App\Http\Controllers\ProspectController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Creance2Controller;
+use App\Models\Creance;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,7 +90,16 @@ Route::get('/edit_emprunt', [EmpruntController::class, 'edit_emprunt'])->name('e
 Route::get('/emprunteur/{data}/edit', [EmpruntController::class, 'data_edit'])->name('edit');
 Route::put('/emprunteur/{data}', [EmpruntController::class, 'update'])->name('update');
 Route::delete('/emprunteur/{data}', [EmpruntController::class, 'destroy'])->name('destroy');
-
+//creances2
+Route::get('/add_creance2', [Creance2Controller::class, 'add_creance2']);
+Route::post('/add_creance2', [Creance2Controller::class, 'send_creance2']);
+Route::get('/edit_creance2', [Creance2Controller::class, 'edit_creance2'])->name('edit_creance2');
+Route::get('/paiement', [Creance2Controller::class, 'paie']);
+Route::post('/paiement', [Creance2Controller::class, 'send_paie']);
+Route::get('/pay/{data}/edit', [Creance2Controller::class, 'data_edit'])->name('edit');
+Route::delete('/pay/{data}', [Creance2Controller::class, 'destroy'])->name('destroy');
+Route::get('/rappel', [Creance2Controller::class, 'rappel'])->name('rappel');
+Route::post('/add_rappelPaiement', [Creance2Controller::class, 'send_rappel']);
 
 Route::get('/dossiers', 'DossierController@index')->name('dossiers.index');
 Route::get('/dossiers/create', 'DossierController@create')->name('dossiers.create');
